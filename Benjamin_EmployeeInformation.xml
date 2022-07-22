@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding= "UTF-8" standalone = "yes"?>
+<EmployeeInfo xmlns:xsi = "www.w3.org/2001/XMLSchema-instance>
+	<EmployeeInfo>
+		<employeeID>200103</employeeID>
+		<Lastname>Tyler</Lastname>
+		<firstname>Kevin</firstname>
+	</EmployeeInfo>
+	<EmployeeInfo>
+		<employeeID>200105</employeeID>
+		<Lastname>Mark</Lastname>
+		<firstname>John</firstname>
+	</EmployeeInfo>
+	<EmployeeInfo>
+		<employeeID>200107</employeeID>
+		<Lastname>Ray</Lastname>
+		<firstname>John</firstname>
+	</EmployeeInfo>
+</EmployeeInfo>

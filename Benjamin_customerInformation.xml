@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding= "UTF-8" standalone = "yes"?>
+<clientInfo xmlns:xsi = "www.w3.org/2001/XMLSchema-instance>
+	<CustomerInfo>
+		<customerID>4323</customerID>
+		<clastname>Adam</clastnameID>
+		<cfirstname>Andrew</cfirstname>
+	</CustomerInfo>
+	<CustomerInfo>
+		<customerID>23234</customerID>
+		<clastname>Chase</clastnameID>
+		<cfirstname>Peter</cfirstname>
+	</CustomerInfo>
+		<CustomerInfo>
+		<customerID>5467</customerID>
+		<clastname>Hopeson</clastnameID>
+		<cfirstname>Syndey</cfirstname>
+	</CustomerInfo>
+</clientInfo>

@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding= "UTF-8" standalone = "yes"?>
+<Stock xmlns:xsi = "www.w3.org/2001/XMLSchema-instance>
+	<StockInfo>
+		<productID>243</productID>
+		<productname>sock</productname>
+		<productCost>3.2</productCost>
+	</StockInfo>
+	<StockInfo>
+		<productID>356</productID>
+		<productname>pen</productname>
+		<productCost>0.99</productCost>
+	</StockInfo>
+	<StockInfo>
+		<productID>876</productID>
+		<productname>book</productname>
+		<productCost>1.87</productCost>
+	</StockInfo>
+</Stock>

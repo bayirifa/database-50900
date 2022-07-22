@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding= "UTF-8" standalone = "yes"?>
+<TruckInformation xmlns:xsi = "www.w3.org/2001/XMLSchema-instance>
+	<TruckInfo>
+		<TruckID>1</TruckID>
+		<trucktype>SUV</trucktype>
+		<truckplate>CM90213</truckplate>
+	</TruckInfo>
+	<TruckInfo>
+		<TruckID>2</TruckID>
+		<trucktype>sedan</trucktype>
+		<truckplate>CM90222</truckplate>
+	</TruckInfo>
+	<TruckInfo>
+		<TruckID>3</TruckID>
+		<trucktype>trailer</trucktype>
+		<truckplate>AD98213</truckplate>
+	</TruckInfo>
+</TruckInformation>
+
