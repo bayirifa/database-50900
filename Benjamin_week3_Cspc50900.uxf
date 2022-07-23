@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>50</y>
+      <w>230</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>CustomerInfo
+--
+customerID: INT PK
+customerLastname: varchar(50)
+customerFirstname: varchar(50)
+customerMiddlename: varchar(50)
+DateAccountOpen: dateTime
+AddressID: int FK
+phoneID: int FK
+phoneNum: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>60</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>CustomerPhoneRecords
+--
+phoneID: int PK
+type:enum("Home", "work", "mobile")
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>200</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>customerAddressInfo
+--
+AddressID:int PK
+Adresstype:enum("home","work","other")
+StreetName:varchar(200)
+city: varchar(200)
+zipcode:char(5)
+county:varchar(200)
+state: varchar(40)
+country: varchar(100)
+customerID:int FK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>250</y>
+      <w>320</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>DeliveryInfo
+--
+DeliveryID: int PK
+DeliveryType: enum("store pickup", "home delivery")</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>70</y>
+      <w>170</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>OrderHistory
+--
+OrderID: int PK
+orderDate: dateTime
+productID: int FK
+quantityBought: int 
+discount: decimal
+totalCost: float
+customerID: int FK
+employeeID:int FK
+haulID: int FK
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1030</x>
+      <y>150</y>
+      <w>210</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>ProducInfo
+--
+productID: int PK
+ProductName: varchar(50)
+ProductBrandName: varchar(50)
+productsize:varchar(40)
+unitCOst: float
+dateManufacture: date
+expiryDate: date
+deptID: int FK
+supplyID: int FK
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1050</x>
+      <y>30</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>DepartmentInfo
+--
+DeptID: int PK
+department: varchar(50)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1030</x>
+      <y>400</y>
+      <w>200</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>StockInfo
+--
+stockID: int PK
+stockDate: dateTime
+productID: int FK
+quantity: int
+supplyID: int FK
+employeeID: int FK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>370</y>
+      <w>220</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>DeliveryDriverInfo
+--
+DriverID: int PK
+DriverLicenseNum: varchar(15)
+Licensetype: varchar(20)
+DateLicenseExp: date
+StateIssued: char(2)
+EmployeeID: int FK
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>450</y>
+      <w>200</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>TruckInfo
+--
+truckID: int PK
+numPlate: char(7)
+trucktype: enum
+truckyear: int
+truckbrand: varchar(100)
+trucklastService: date
+truckCondition: varchar(100)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>310</y>
+      <w>180</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>HaulInfo
+--
+haulID: int PK
+customerID: int PK
+orderID: int FK
+deliveryID: int FK
+addressID: int FK
+truckID: int FK
+driverID: int FK
+dateOnTruck: dateTime
+timeDelivered: dateTime
+deliveryNotes: varchar(100)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>560</y>
+      <w>220</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>EmployeeInfo
+--
+employeeID: int PK
+employeeLastName: varchar(50)
+employeeFirstname: varchar(50)
+dateofBirth: date
+employeeHomeAddress: varchar(200)
+primaryContactNum: int
+emergencyContact: int
+dateHired: date
+dateResigned: date
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>600</y>
+      <w>260</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>SupplyInfo
+--
+supplyID:int PK
+companyName: varchar(100)
+DriverName: varchar(100)
+truckNum: varchar (10)
+dateReceived: date
+receivingEmployee(employeeID): int FK
+receivingCondition: varchar(20)
+receivingNotes: varchar (500)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>90</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>310</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1130</x>
+      <y>310</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>510</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>590</y>
+      <w>270</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>250.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>820</x>
+      <y>230</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>380</y>
+      <w>190</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>170.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>200</y>
+      <w>130</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>310</y>
+      <w>100</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>110</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>70.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>170</y>
+      <w>100</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>320</y>
+      <w>480</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>460.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>80</y>
+      <w>180</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>160.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>890</x>
+      <y>130</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>310</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>480</y>
+      <w>490</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>470.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+</diagram>
